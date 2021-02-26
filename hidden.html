@@ -41,6 +41,32 @@ function processGuess(){
     }
 }
 </script>
+<div class="container">
+    <img id="flowers" src="image1.jpg" alt="Connection error" width="200px" height="200px" onclick="rotateImage()">
+</div>
 
+<script>
+    var currentImage=0
+    function rotateImage(){
+        switch(currentImage){
+            case 0:
+                currentImage+=1;
+                document.getElementById("flowers").scr="image1.jpg";
+                break;
+            case 1:
+                currentImage+=1;
+                document.getElementById("flowers").src="image2.jpg";
+                break;
+            case 2:
+                currentImage+=1;
+                document.getElementById("flowers").src="image3.jpg";
+                break;
+            default:
+                currentImage+=1;
+                document.getElementById("flowers").src="image1.jpg";
+        }
+    }
+    
+</script>
 </body>
 </html> 
