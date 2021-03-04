@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>Bear</title>
+ </head>
+<body>
+
+<h1>Syed Abdul Suboor builds a Bear</h1>
+<form>
+    <input type="checkbox" id="hat" name="hat"   
+      value="hat" >
+    <label for="hat">Hat</label></br>
+  
+    <input type="checkbox" id="scarf" name="scarf" 
+       value="scarf">
+    <label for="scarf">Scarf</label></br>
+  
+    <input type="checkbox" id="shirt" name="shirt"   
+       value="shirt">
+    <label for="shirt">Shirt</label></br>
+
+    <input type="button" onclick="startbear()" value="Start a bear">
+  </form>
+
+  <form>
+    <label for="property">Enter the property </label>
+    <input type ="text" id="property" name="property" value="color"> <br>
+
+    <label for="value">Enter a value</label>
+    <input type ="text" id="value" name="value" > <br>
+
+    <input type="button" onclick="updatebear()" value="Update the bear">
+</form>
+
+
+
+<p id="result"> </p>
+
+<script> 
+var my_bear={};
+function  startbear(){
+    my_bear={};
+   if(document.getElementById("hat").checked){
+       my_bear["hat"]=true;
+   }else{
+       my_bear["hat"]=false;
+   }
+   if(document.getElementById("scarf").checked){
+       my_bear["scarf"]=true;
+   }else{
+       my_bear["scard"]=false;
+   }
+   if (document.getElementById("shirt").checked) {
+       my_bear["shirt"]=true;
+   }else{
+       my_bear["shirt"]=false;
+   }
+   out=document.getElementById("result")
+   my_bear=JSON.stringify(my_bear)
+   out.innerHTML=my_bear
+   my_bear=JSON.parse(my_bear)
+}
+
+function updatebear(){
+   
+    property = document.getElementById("property").value
+    value = document.getElementById("value").value
+   my_bear[property]=value;
+   out=document.getElementById("result")
+   my_bear=JSON.stringify(my_bear)
+   out.innerHTML=my_bear
+   my_bear=JSON.parse(my_bear)
+}
+</script>
+
+</body>
+</html> 
