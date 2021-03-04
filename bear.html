@@ -2,34 +2,45 @@
 <html>
  <head>
      <title>Bear</title>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
  </head>
 <body>
 
 <h1>Syed Abdul Suboor builds a Bear</h1>
 <form>
+    <div class="form-group">
     <input type="checkbox" id="hat" name="hat"   
       value="hat" >
     <label for="hat">Hat</label></br>
-  
+</div>
+<div class="form-group">
     <input type="checkbox" id="scarf" name="scarf" 
        value="scarf">
     <label for="scarf">Scarf</label></br>
-  
+  </div>
+  <div class="form-group">
     <input type="checkbox" id="shirt" name="shirt"   
        value="shirt">
     <label for="shirt">Shirt</label></br>
-
-    <input type="button" onclick="startbear()" value="Start a bear">
+    </div>
+    <input type="button" class="btn btn-primary" onclick="startbear()" value="Start a bear">
   </form>
 
   <form>
+    <div class="form-group">
     <label for="property">Enter the property </label>
     <input type ="text" id="property" name="property" value="color"> <br>
-
+        </div>
+        <div class="form-group">
     <label for="value">Enter a value</label>
     <input type ="text" id="value" name="value" > <br>
-
-    <input type="button" onclick="updatebear()" value="Update the bear">
+    </div>
+    <input type="button" class="btn btn-primary" onclick="updatebear()" value="Update the bear">
 </form>
 
 
